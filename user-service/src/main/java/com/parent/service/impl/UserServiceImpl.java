@@ -18,7 +18,7 @@ import java.util.List;
 @Component
 public class UserServiceImpl implements UserService {
 
-    @Reference(interfaceClass = OrderService.class)
+    @Reference(interfaceClass = OrderService.class, stub = "com.parent.service.impl.OrderServiceStub")
     private OrderService orderService;
 
     @Override

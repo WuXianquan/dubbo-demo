@@ -33,6 +33,11 @@ public class UserController {
         return "Hello user!";
     }
 
+    /**
+     * http://localhost:8082/user/user/userOrderList?userId=1
+     * @param userId
+     * @return
+     */
     @RequestMapping("/userOrderList")
     @ResponseBody
     public List<Order> userOrderList(@RequestParam("userId") String userId) {

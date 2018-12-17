@@ -23,18 +23,4 @@ public class TestController {
     public String test() {
         return "test success!";
     }
-
-    @RequestMapping("/testSetRedis")
-    public String testSetRedis(HttpServletRequest request, @RequestParam(defaultValue = "Lon") String username) {
-        String key = "user_" + username;
-        request.setAttribute(key, username);
-        return key;
-    }
-
-    @RequestMapping("/testGetRedis")
-    public String testGetRedis(HttpServletRequest request, @RequestParam(defaultValue = "Lon") String username) {
-        String key = "user_" + username;
-        System.out.println(request.getAttribute(key));
-        return (String) request.getAttribute(key);
-    }
 }
